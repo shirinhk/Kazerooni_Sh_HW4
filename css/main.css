@@ -1,0 +1,47 @@
+* {
+  border:none;
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+.hidden {
+  display:none;
+}
+
+html, body {
+  height: 100vh;
+} /*vh = viewport height - a dynamic measurment that refers to the visible area*/
+
+body {
+  font-family: arial, helvetica, sans-serif;
+  font-size: 16px;
+}
+
+main {
+  display:flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+main > div {
+  flex: 1;
+  border: thin solid black;
+  padding: 1em;
+}
+
+.box > span {
+  display: inline-block;
+  padding:4px 12px;
+  border-radius: 0.5em;
+  background-color: blue;
+  color: white;
+}
+
+.box:nth-of-type(3) >span, .box:nth-of-type(4) >span {
+  display: none;
+}
+
+@media screen and (min-width: 641px) {
+  main { flex-direction: row;}
+  /*max-width*/
+}
