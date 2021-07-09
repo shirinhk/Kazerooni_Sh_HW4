@@ -37,11 +37,33 @@ main > div {
   color: white;
 }
 
-.box:nth-of-type(3) >span, .box:nth-of-type(4) >span {
+.box:nth-of-type(3), .box:nth-of-type(4) {
   display: none;
 }
 
+.box:nth-of-type(1) {
+  background-color: pink;
+}
+
+.box:nth-of-type(2) {
+  background-color: red;
+}
+
 @media screen and (min-width: 641px) {
-  main { flex-direction: row;}
-  /*max-width*/
+  main { flex-direction: row; max-width: 1140px;}
+
+  .box:nth-of-type(3), .box:nth-of-type(4) {
+    display: block;}
+
+  .box:nth-of-type(1) {
+    background-color: blue;}
+
+  .box:nth-of-type(2) {
+    background-color: purple;}
+
+  .box:nth-of-type(3) {
+    background-color: grey;}
+
+  .box:nth-of-type(4) {
+    background-color: brown;}
 }
